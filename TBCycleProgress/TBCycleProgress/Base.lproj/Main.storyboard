@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQK-Hj-dXz" customClass="TBCycleView">
+                                <rect key="frame" x="60" y="70" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cM7-A7-qcK"/>
+                                    <constraint firstAttribute="height" constant="200" id="tRs-gc-gXt"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-ud-4ug">
+                                <rect key="frame" x="58" y="362" width="213" height="31"/>
+                                <connections>
+                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="11r-Gp-Sne"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKg-2U-ddw">
+                                <rect key="frame" x="73" y="444" width="66" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8D1-vn-Pda"/>
+                                    <constraint firstAttribute="width" constant="66" id="lBt-Qg-l9k"/>
+                                </constraints>
+                                <state key="normal" title="点我动画"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uzx-oZ-zeL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uD-na-6HB">
+                                <rect key="frame" x="73" y="533" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DKg-2U-ddw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="73" id="A0X-1c-vhd"/>
+                            <constraint firstItem="fBg-ud-4ug" firstAttribute="top" secondItem="DQK-Hj-dXz" secondAttribute="bottom" constant="92" id="IHt-aP-1LO"/>
+                            <constraint firstItem="1uD-na-6HB" firstAttribute="top" secondItem="DKg-2U-ddw" secondAttribute="bottom" constant="59" id="UR7-Ev-fyM"/>
+                            <constraint firstItem="DQK-Hj-dXz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="aaI-Up-HKG"/>
+                            <constraint firstItem="DQK-Hj-dXz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-27.5" id="bTR-FH-cs1"/>
+                            <constraint firstItem="1uD-na-6HB" firstAttribute="leading" secondItem="DKg-2U-ddw" secondAttribute="leading" id="bcO-Bh-gUV"/>
+                            <constraint firstItem="DKg-2U-ddw" firstAttribute="top" secondItem="fBg-ud-4ug" secondAttribute="bottom" constant="52" id="gOq-vh-LaC"/>
+                            <constraint firstItem="fBg-ud-4ug" firstAttribute="leading" secondItem="DQK-Hj-dXz" secondAttribute="leading" id="xxX-6q-549"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fBg-ud-4ug" secondAttribute="trailing" constant="90" id="zui-hK-Cxv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cycleView" destination="DQK-Hj-dXz" id="uMc-xV-tDe"/>
+                        <outlet property="myLable" destination="1uD-na-6HB" id="wfv-1y-crb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="339"/>
+        </scene>
+    </scenes>
+</document>
